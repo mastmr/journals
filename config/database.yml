@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
+  username: journals_user
+  password: j0urn4l5_u53r
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: journals_development
+  database: journals_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: journals_production
-  username: journals
+  database: journals
+  username: journals_user
   password: <%= ENV["JOURNALS_DATABASE_PASSWORD"] %>

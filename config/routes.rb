@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root "journals#index"
+  # get "/journals", to: "journals#index"
+  # get "/journals/:id", to: "journals#show"
+  resources :journals
 end

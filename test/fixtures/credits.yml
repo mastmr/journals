@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_item: MyString
+  price: 1
+  journal: one
+
+two:
+  account_item: MyString
+  price: 1
+  journal: two

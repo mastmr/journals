@@ -1,0 +1,46 @@
+<h1>New Journal</h1>
+<%= form_with model: @journal do |form| %>
+  <div>
+    <%= form.label :date %><br>
+    <%= form.text_field :date %>
+    <% @journal.errors.full_messages_for(:date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :summary %><br>
+    <%= form.text_area :summary %>
+    <% @journal.errors.full_messages_for(:summary).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :note %><br>
+    <%= form.text_area :note %>
+    <% @journal.errors.full_messages_for(:note).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :income_type %><br>
+    <%= form.text_field :income_type %>
+    <% @journal.errors.full_messages_for(:income_type).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :project %><br>
+    <%= form.text_field :project %>
+    <% @journal.errors.full_messages_for(:project).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
